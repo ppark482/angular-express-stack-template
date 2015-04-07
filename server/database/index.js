@@ -12,6 +12,7 @@ var developmentDb = mysql.createConnection({
 	user 			: 'root',
 	password 	: ''
 });
+
 var productionDb = mysql.createConnection({
 	host 			: '',
 	user 			: '',

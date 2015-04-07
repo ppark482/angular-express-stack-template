@@ -4,7 +4,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////*/
 
-var mongoose = require('mongoose');
+var mysql = require('mysql');
 var bcrypt = require('bcrypt');
 var Schema = mongoose.Schema;
 

@@ -62,11 +62,11 @@
 				request.success( function (data) {
 					// json response is recognized as
 					// the data parameter here
-					console.log(data.msg);
+					console.log(data);
 				});
 	 
 				request.error( function (data) {
-					console.log(data.msg);
+					console.log(data);
 				});
 	 
 			};
