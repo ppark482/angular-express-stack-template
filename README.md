@@ -1,12 +1,14 @@
 # Full Stack Template
 
 - Angular JS 
+- Bootstrap / Sass / Compass
+
 - Grunt
 - Express
 - Node
 - Nodemon
+- bcrypt
 - Git / Github 
-- Bootstrap / Sass / Compass
 - Underscore
 - Moment
 - CLI Color
@@ -15,7 +17,9 @@
 
 		$ grunt serve
 
-To serve up on localhost:9000
+Defaults to serve up on: 
+
+		localhost:9000
 
 Grunt Server handles:
 - SASS Compass
@@ -27,4 +31,6 @@ Grunt Server handles:
 
 		$ npm test
 
-To serve up on localhost:3000
+Defaults to serve up on: 
+		
+		localhost:3000
