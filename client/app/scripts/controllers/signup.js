@@ -59,12 +59,14 @@
 				var request = $http.post('/signup', user);
 	 
 				// we'll come back to here and fill in more when ready
-				request.success(function (data) {
-					// to be filled in on success
+				request.success( function (data) {
+					// json response is recognized as
+					// the data parameter here
+					console.log(data.msg);
 				});
 	 
-				request.error(function (data) {
-					// to be filled in on error
+				request.error( function (data) {
+					console.log(data.msg);
 				});
 	 
 			};
