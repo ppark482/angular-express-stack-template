@@ -4,7 +4,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////*/
 var mysql = require('mysql');
-var UserModel = require('./schemas/users');
+// var UserModel = require('./schemas/users');
 
 // Connections 
 var developmentDb = mysql.createConnection({
@@ -48,4 +48,4 @@ if (process.env.NODE_ENV === 'production') {
 	});
 }
 
-exports.users = UserModel;
+// exports.users = UserModel;

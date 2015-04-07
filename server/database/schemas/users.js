@@ -6,7 +6,13 @@
 
 var mysql = require('mysql');
 var bcrypt = require('bcrypt');
-var Schema = mongoose.Schema;
+var Sequelize = require('sequelize');
+var sequelize = new Sequelize('database', 'username', 'password');
+
+// Define user schema
+var userSchema = sequelize.define('User', {
+	
+})
 
 // Define the User Schema
 var userSchema = new Schema({
@@ -52,8 +58,5 @@ userSchema.methods.comparePassword = function (triedPassword, cb) {
         cb(null, isMatch);
     });
 };
-
-// The primary user model
-var User = mongoose.model('User', userSchema);
 
 module.exports = User;
