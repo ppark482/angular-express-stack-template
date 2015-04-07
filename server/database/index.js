@@ -3,12 +3,20 @@
 	Database Interface
 // 
 //////////////////////////////////////////////////////////////////////////////*/
-var mongoose = require('mongoose');
+var mysql = require('mysql');
 var UserModel = require('./schemas/users');
 
 // Connections 
-var developmentDb = ''; // url to development Database
-var productionDb = ''; // url to production Database
+var developmentDb = mysql.createConnection({
+	host 			: 'localhost',
+	user 			: 'root',
+	password 	: ''
+});
+var productionDb = mysql.createConnection({
+	host 			: '',
+	user 			: '',
+	password 	: ''
+});
 var usedDb;
 
 // if development
@@ -16,7 +24,13 @@ if (process.env.NODE_ENV === 'development') {
 	// set database to the development one
 	usedDb = developmentDb;
 	// connect to it here
-	mongoose.connect(usedDb);
+	usedDb.connect( function (err) {
+		if (err) {
+			console.error('error connecting: ' + err.stack);
+			return;		
+		}
+		console.log('connected as id ' + usedDb.threadId);
+	});
 }
 
 // if production
@@ -24,17 +38,13 @@ if (process.env.NODE_ENV === 'production') {
 	// set database to the production one
 	usedDb = productionDb;
 	// connect to it here
-	mongoose.connect(usedDb);
+	usedDb.connect( function (err) {
+		if (err) {
+			console.error('error connecting: ' + err.stack);
+			return;			
+		}
+		console.log('connected as id ' + usedDb.threadId);
+	});
 }
-
-// get an instance of our connection to our database
-var db = mongoose.connection;
-
-// Log that the connection has successfully been opened
-db.on('error', console.error.bind(console, 'connection error:'));
-// Open the connection
-db.once('open', function callback () {
-	console.log('Database Connection Successfully Opened at ' + usedDb);
-});
 
 exports.users = UserModel;
