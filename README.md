@@ -7,12 +7,16 @@
 - Nodemon
 - Git / Github 
 - Bootstrap / Sass / Compass
+- Underscore
+- Moment
+- CLI Color
 
 ### Client Side
 
 		$ grunt serve
 
-To serve up on localhost:9000.
+To serve up on localhost:9000
+
 Grunt Server handles:
 - SASS Compass
 - Compiling SASS into CSS
