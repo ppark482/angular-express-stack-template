@@ -1,4 +1,4 @@
-# Full Stack Template
+# Angular - Express - Template
 
 - [AngularJS](https://angularjs.org/)
 - [Bootstrap](http://getbootstrap.com/) / [Sass](http://sass-lang.com/) / [Compass](http://compass-style.org/)
@@ -34,5 +34,7 @@ Grunt Server handles:
 Defaults to serve up on: 
 		
 		localhost:3000
+
+Comes installed with [MySql](https://www.mysql.com/) accessed using Sequelize but can be switched out for Mongo.
 
 Only /dist/ folder needs to be published for production
