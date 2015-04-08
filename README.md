@@ -1,17 +1,17 @@
 # Full Stack Template
 
-- Angular JS 
-- Bootstrap / Sass / Compass
-
-- Grunt
-- Express
-- Node
-- Nodemon
-- bcrypt
+- [AngularJS](https://angularjs.org/)
+- [Bootstrap](http://getbootstrap.com/) / [Sass](http://sass-lang.com/) / [Compass](http://compass-style.org/)
+- [GruntJS](http://gruntjs.com/)
+- [ExpressJS](http://expressjs.com/)
+- [NodeJS](https://nodejs.org/)
+- [Nodemon](http://nodemon.io/)
+- [Sequelize](http://docs.sequelizejs.com/en/latest/)
+- [bcrypt](https://github.com/ncb000gt/node.bcrypt.js/)
 - Git / Github 
-- Underscore
-- Moment
-- CLI Color
+- [Underscore](http://underscorejs.org/)
+- [MomentJS](http://momentjs.com/)
+- [CLI Color](https://github.com/medikoo/cli-color)
 
 ### Client Side
 
@@ -34,3 +34,5 @@ Grunt Server handles:
 Defaults to serve up on: 
 		
 		localhost:3000
+
+Only /dist/ folder needs to be published for production
