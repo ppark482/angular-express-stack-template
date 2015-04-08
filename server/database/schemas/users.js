@@ -11,7 +11,7 @@ var sequelize = new Sequelize('database', 'username', 'password');
 
 // Define user schema
 var userSchema = sequelize.define('User', {
-	
+
 })
 
 // Define the User Schema
